@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.a {
+  background-color: lightgreen;
+}
+#b {
+  width: 250px;
+  height: 250px;
+}
+.c {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  padding: 2px;
+  mix-blend-mode: difference;
+}
+#d {
+  isolation: auto;
+}
+#e {
+  isolation: isolate;
+}
+</style>
+</head>
+<body>
+
+<h1>The isolation Property</h1>
+
+<div id="b" class="a">
+  <div id="d">
+  <div class="a c">div d: isolation: auto;</div>
+  </div>
+  <div id="e">
+  <div class="a c">div e: isolation: isolate;</div>
+  </div>
+</div>
+
+<p><b>Note:</b> Edge prior 79 do not support the isolation property.</p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#main {
+  width: 400px;
+  height: 100px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  justify-content: center;
+}
+
+#main div {
+  width: 70px;
+  height: 70px;
+}
+</style>
+</head>
+<body>
+
+<h1>The justify-content Property</h1>
+
+<p>The "justify-content: center;" aligns the flex items at the center of the container:</p>
+
+<div id="main">
+  <div style="background-color:coral;">1</div>
+  <div style="background-color:lightblue;">2</div>
+  <div style="background-color:pink;">3</div>
+</div>
+
+<p><b>Note:</b> Internet Explorer 10 and earlier versions do not support the justify-content property.</p>
+
+</body>
+</html>
